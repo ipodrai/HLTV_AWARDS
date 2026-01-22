@@ -1,0 +1,1160 @@
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  color: #e1c693;
+  font-family: 'Protest Strike', sans-serif;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.hero {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  aspect-ratio: 1920 / 1025;
+  overflow: hidden;
+  background-color: #1a1a1a;
+}
+
+.hero__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero__content {
+  position: absolute;
+  top: 10.34%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 2;
+  width: 10.7%;
+}
+
+.hero__logo {
+  width: 71.3%;
+  height: auto;
+  margin-bottom: 7px;
+}
+
+.hero__text-group {
+  display: flex;
+  flex-direction: column;
+  gap: -0.5vw;
+}
+
+.hero__text {
+  font-family: 'Protest Strike', sans-serif;
+  font-weight: 400;
+  color: #e1c693;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  line-height: 1;
+  font-size: clamp(24px, 3.4vw, 66px);
+  margin-top: -0.1em;
+}
+
+.hero__text:first-child {
+  margin-top: 0;
+}
+
+.hero__fg {
+  position: absolute;
+  top: 36.58%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* ============================================
+   HLTV SECTION
+   ============================================ */
+
+.hltv-section {
+  background-color: #000000;
+  width: 100%;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.hltv-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  max-width: 1920px;
+  width: 100%;
+  gap: 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.hltv-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  flex: 0 0 auto;
+}
+
+.hltv-icon {
+  width: 104px;
+  height: 104px;
+  object-fit: cover;
+}
+
+.hltv-text-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.hltv-title {
+  font-family: 'Protest Strike', sans-serif;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 1;
+  color: #ffffff;
+  text-shadow: 0px 2.83px 2.83px rgba(0, 0, 0, 0.25);
+  letter-spacing: -0.02em;
+}
+
+.hltv-subtitle {
+  font-family: 'Protest Strike', sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1;
+  color: #ffffff;
+  text-shadow: 0px 2.83px 2.83px rgba(0, 0, 0, 0.25);
+  margin-top: -5px;
+}
+
+/* ============================================
+   SCHEDULE SECTION
+   ============================================ */
+
+.schedule-section {
+  background-color: #000000;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.schedule-container {
+  width: 100%;
+  max-width: 1920px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 12.5%;
+  padding-right: 12.5%;
+}
+
+.schedule-header {
+  margin-bottom: 50px;
+}
+
+.schedule-title {
+  font-family: 'Protest Strike', sans-serif;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 1.2;
+  color: #e1c693;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 240px 80px 1fr;
+  align-items: start;
+}
+
+.time-col {
+  padding-top: 10px;
+}
+
+.time-text {
+  font-family: 'Protest Strike', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #e1c693;
+  display: block;
+}
+
+.marker-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  min-height: 204px;
+}
+
+.timeline-marker-icon {
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+}
+
+.timeline-line {
+  width: 6px;
+  background-color: #ffffff;
+  flex-grow: 1;
+  margin-top: 10px;
+  margin-bottom: 0;
+  border-radius: 90px;
+  min-height: 100px;
+}
+
+.content-col {
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.event-title {
+  font-family: 'Protest Strike', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  line-height: 1.4;
+}
+
+.event-desc {
+  font-family: 'Protest Strike', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #e1c693;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ============================================
+   NOMINATIONS SECTION
+   ============================================ */
+
+#section-header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #000000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 10%;
+}
+
+.main-title {
+  font-family: 'Protest Strike', sans-serif;
+  font-weight: 400;
+  font-size: 64px;
+  color: #e1c693;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.2;
+}
+
+#section-nominations {
+  padding-bottom: 100px;
+}
+
+.nominations-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+}
+
+.category-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.category-title {
+  font-family: 'Protest Strike', sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: #e1c693;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+}
+
+.cards-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.nomination-card {
+  width: 258px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card-top {
+  height: 25px;
+  background-color: #e1c693;
+  color: #000000;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-image-area {
+  width: 258px;
+  height: 285px;
+  position: relative;
+  overflow: hidden;
+  background-color: #111;
+}
+
+.card-bg-texture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.card-main-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.card-name-box {
+  height: 85px;
+  background-color: #e1c693;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.nomination-card .nickname,
+.player-card .nickname {
+  font-family: 'Orbitron', sans-serif;
+  color: #000000;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.card-bottom-box {
+  height: 46px;
+  background-color: #000000;
+  border: 1px solid #e1c693;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -1px;
+  position: relative;
+  z-index: 3;
+}
+
+.nomination-card .realname,
+.player-card .realname {
+  font-family: 'Urbanist', sans-serif;
+  color: #e1c693;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ============================================
+   NEWS SECTION
+   ============================================ */
+
+#section-news {
+  width: 100%;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+}
+
+.news-container {
+  width: 100%;
+  max-width: 1920px;
+  padding: 40px 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.news-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.news-title {
+  font-family: 'Protest Strike', sans-serif;
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 1.2;
+  color: #e1c693;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.news-link {
+  font-family: 'Protest Strike', sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.6;
+  color: #a4a4a4;
+  text-decoration: none;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.news-link:hover {
+  color: #ffffff;
+}
+
+.news-content {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  align-items: flex-start;
+}
+
+.decorative-blur {
+  position: absolute;
+  left: 484px;
+  top: 164px;
+  width: 17px;
+  height: 20px;
+  background-color: #306d8c;
+  filter: blur(5px);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.news-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.news-card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-caption {
+  background-color: #17171c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.card-caption h3 {
+  font-family: 'Protest Strike', sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0;
+  text-align: center;
+}
+
+.main-card {
+  width: 750px;
+  flex-shrink: 0;
+}
+
+.main-card .card-image {
+  height: 449px;
+}
+
+.main-caption {
+  height: 173px;
+}
+
+.main-caption h3 {
+  font-size: 42px;
+}
+
+.news-side-column {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  width: 459px;
+  flex-shrink: 0;
+}
+
+.side-card .card-image {
+  height: 194px;
+}
+
+.side-caption {
+  height: 92px;
+}
+
+.side-caption h3 {
+  font-size: 24px;
+}
+
+/* ============================================
+   HALL OF FAME SECTION
+   ============================================ */
+
+.hall-of-fame-section {
+  background-color: #000000;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.hall-of-fame-section .container {
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+
+.section-title {
+  font-family: 'Protest Strike', sans-serif;
+  font-size: 64px;
+  color: #e1c693;
+  margin: 0;
+  text-align: center;
+  font-weight: 400;
+}
+
+.cards-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.player-card {
+  width: 258px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.card-top-bar {
+  height: 25px;
+  background-color: #e1c693;
+  color: #000000;
+  font-family: 'Urbanist', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.player-card .card-image {
+  width: 100%;
+  height: 285px;
+  overflow: hidden;
+}
+
+.player-card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.card-nickname-bar {
+  height: 85px;
+  background-color: #e1c693;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-card .nickname {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.card-realname-bar {
+  height: 47px;
+  background-color: #0a0a0a;
+  border: 1px solid #e1c693;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+
+.player-card .realname {
+  font-size: 12px;
+  font-weight: 500;
+  color: #e1c693;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  z-index: 1;
+}
+
+/* ============================================
+   FOOTER SECTION
+   ============================================ */
+
+#section-footer {
+  width: 100%;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-root {
+  width: 100%;
+  max-width: 1920px;
+  background-color: #000000;
+  padding: 40px 240px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 50px;
+  width: 100%;
+}
+
+.logo-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  width: 104px;
+  height: 104px;
+  object-fit: contain;
+}
+
+.logo-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.logo-text-main {
+  font-family: 'Protest Strike', sans-serif;
+  font-weight: 400;
+  font-size: 54px;
+  line-height: 1.2;
+  color: #ffffff;
+  text-shadow: 0px 2.83px 2.83px rgba(0, 0, 0, 0.25);
+  margin-bottom: -10px;
+}
+
+.logo-text-sub {
+  font-family: 'Protest Strike', sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.2;
+  color: #ffffff;
+  text-shadow: 0px 2.83px 2.83px rgba(0, 0, 0, 0.25);
+}
+
+.copyright-text {
+  font-family: 'Protest Strike', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #ffffff;
+  margin: 0;
+  white-space: nowrap;
+  flex-grow: 1;
+}
+
+.social-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  flex-shrink: 0;
+}
+
+.social-icon {
+  width: 85px;
+  height: 85px;
+  object-fit: contain;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Large Desktop */
+@media (max-width: 1600px) {
+  .footer-root {
+    padding: 40px 100px;
+  }
+
+  .news-container {
+    padding: 40px 100px;
+  }
+
+  .news-content {
+    gap: 50px;
+  }
+}
+
+/* Desktop */
+@media (max-width: 1200px) {
+  .footer-root {
+    padding: 40px 50px;
+  }
+
+  .footer-content {
+    justify-content: space-between;
+  }
+
+  .copyright-text {
+    font-size: 18px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .news-container {
+    padding: 40px 40px;
+  }
+
+  .news-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-card,
+  .news-side-column {
+    width: 100%;
+    max-width: 750px;
+  }
+
+  .news-side-column {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .side-card {
+    width: 48%;
+  }
+
+  .decorative-blur {
+    display: none;
+  }
+
+  .cards-grid {
+    gap: 20px;
+  }
+
+  .schedule-title {
+    font-size: 48px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .schedule-container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .timeline-item {
+    grid-template-columns: 150px 60px 1fr;
+  }
+
+  .cards-row {
+    gap: 30px;
+  }
+}
+
+/* Mobile Large */
+@media (max-width: 992px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .logo-group {
+    flex-direction: column;
+  }
+
+  .logo-text-wrapper {
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .copyright-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .social-group {
+    justify-content: center;
+  }
+}
+
+/* Mobile Medium */
+@media (max-width: 768px) {
+  .hero__content {
+    width: 25%;
+    top: 5%;
+  }
+
+  .hero__text {
+    font-size: clamp(20px, 6vw, 40px);
+  }
+
+  .hltv-container {
+    gap: 20px;
+    justify-content: flex-start;
+    padding: 0 20px;
+  }
+
+  .hltv-item {
+    flex-shrink: 0;
+    transform: scale(0.6);
+  }
+
+  .hltv-title {
+    font-size: 32px;
+  }
+
+  .hltv-subtitle {
+    font-size: 18px;
+  }
+
+  .hltv-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .timeline-item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 40px;
+  }
+
+  .marker-col {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+  }
+
+  .timeline-marker-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .timeline-line {
+    width: 4px;
+  }
+
+  .time-col {
+    margin-bottom: 8px;
+    padding-top: 0;
+  }
+
+  .content-col {
+    padding-left: 0;
+    padding-top: 0;
+  }
+
+  .time-text {
+    font-size: 20px;
+  }
+
+  .event-title {
+    font-size: 22px;
+  }
+
+  .event-desc {
+    font-size: 18px;
+  }
+
+  .header-container {
+    justify-content: center;
+    padding-left: 20px;
+  }
+
+  .main-title {
+    font-size: 40px;
+  }
+
+  .cards-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .category-title {
+    font-size: 28px;
+  }
+
+  .nomination-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .card-image-area {
+    width: 100%;
+  }
+
+  .news-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .news-title {
+    font-size: 60px;
+  }
+
+  .news-link {
+    font-size: 24px;
+  }
+
+  .news-side-column {
+    flex-direction: column;
+  }
+
+  .side-card {
+    width: 100%;
+  }
+
+  .main-caption h3 {
+    font-size: 28px;
+  }
+
+  .main-caption {
+    height: auto;
+    padding: 30px 20px;
+  }
+
+  .section-title {
+    font-size: 42px;
+    margin-bottom: 20px;
+  }
+
+  .cards-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .player-card {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 40px;
+  }
+}
+
+/* Mobile Small */
+@media (max-width: 480px) {
+  .footer-root {
+    padding: 30px 20px;
+  }
+
+  .logo-icon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .social-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .logo-text-main {
+    font-size: 40px;
+  }
+
+  .logo-text-sub {
+    font-size: 22px;
+  }
+
+  .hltv-container {
+    gap: 15px;
+  }
+
+  .hltv-item {
+    flex-shrink: 0;
+    transform: scale(0.5);
+  }
+
+  .hltv-title {
+    font-size: 24px;
+  }
+
+  .hltv-subtitle {
+    font-size: 14px;
+  }
+
+  .hltv-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .schedule-title {
+    font-size: 36px;
+  }
+
+  .main-title {
+    font-size: 32px;
+  }
+
+  .category-title {
+    font-size: 24px;
+  }
+
+  .news-title {
+    font-size: 40px;
+  }
+
+  .news-link {
+    font-size: 20px;
+  }
+
+  .main-caption h3 {
+    font-size: 24px;
+  }
+
+  .side-caption h3 {
+    font-size: 20px;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .hall-of-fame-section {
+    padding: 30px 15px;
+    min-height: auto;
+  }
+
+  .hall-of-fame-section .container {
+    gap: 40px;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 360px) {
+  .hero__content {
+    width: 30%;
+  }
+
+  .hero__text {
+    font-size: clamp(18px, 5vw, 30px);
+  }
+
+  .main-title {
+    font-size: 28px;
+  }
+
+  .category-title {
+    font-size: 20px;
+  }
+
+  .news-title {
+    font-size: 32px;
+  }
+
+  .schedule-title {
+    font-size: 28px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+}
